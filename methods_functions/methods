@@ -1,0 +1,5 @@
+mylist = list(range(50,69))
+
+mylist.insert(4, 11)
+print(mylist)
+print(f"What do we have here {mylist[4]}")
