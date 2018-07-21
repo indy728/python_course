@@ -14,7 +14,7 @@
       <file leaf-file-name="tic-tac-toe.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tic-tac-toe.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
+            <state relative-caret-position="870">
               <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -93,7 +93,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1282" y="0" width="1278" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960877" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -120,7 +119,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tic-tac-toe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
+        <state relative-caret-position="870">
           <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
