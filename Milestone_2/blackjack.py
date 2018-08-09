@@ -13,6 +13,11 @@ values = {'Two':2, 'Three':3, 'Four':4, 'Five':5, 'Six':6, 'Seven':7, \
 
 playing = True
 
+def strcmp_nocase(s1,s2):
+    if s1.lower() == s2.lower():
+        return True
+    return False
+
 class Card:
 
     def __init__(self,suit,rank,value):
@@ -71,10 +76,64 @@ class Hand:
             write(card.visualize())
         print()
 
-def strcmp_nocase(s1,s2):
-    if s1.lower() == s2.lower():
-        return True
-    return False
+class Chips:
+
+    def __init__(self):
+        self.bank = 50
+        self.bet = 0
+    
+    def win_bet(self):
+        self.bank += self.bet
+        self.bet = 0
+
+    def lose_bet(self):
+        self.bank -= self.bet
+        self.bet = 0
+
+    def push_bet(self):
+        self.bet = 0
+    
+def take_bet(chips):
+
+    while True:
+        try:
+            chips.bet = int(input(f'Your bank is at {chips.bank}. How many chips would you like to bet? '))
+        except ValueError:
+            print('Sorry, a bet must be in the form of an integer!')
+        else:
+            if chips.bet > chips.bank:
+                print(f"Sorry, your bet cannot exceed {chips.bank}")
+            else:
+                break
+
+def hit_or_stay(dealer, player):
+    while True:
+        os.system("clear")
+
+        game_board(dealer, player)
+
+        response = input("Would you like to hit or stay?: ")
+        if strcmp_nocase("hit", response):
+            card = player.hit()
+            print(card.visualize())
+            input("Press enter to continue...")
+            os.system("clear")
+            # game_board(dealer, player)
+            if player.value == 21:
+                print(f"Player has 21!")
+                break
+            elif player.value > 21:
+                if player.aces > 0:
+                    player.value -= 10
+                    player.aces -= 1
+                else:
+                    print(f"Bust! Player has {player.value}!")
+                    break
+        else:
+            print(f"Player opts to stay with a value of {player.value}")
+            break
+    dealer.cards[0].hidden = False    
+    input("Press enter to continue...")
 
 def game_board(dealer, player):
     print("Dealer:")
@@ -86,7 +145,7 @@ def game_board(dealer, player):
     player.show()
     print("\n\n\n")
 
-def blackjack(playing=True):
+def blackjack(playing = True):
     deck = Deck()
     deck.shuffle()
 
@@ -100,32 +159,8 @@ def blackjack(playing=True):
         x += 1
 
     dealer.cards[0].hidden = True
-    game_board(dealer, player)
 
-    while player.playing:
-        hit_or_stay = input("Would you like to hit or stay?: ")
-        if strcmp_nocase("hit", hit_or_stay):
-            card = player.hit()
-            print(card.visualize())
-            input("Press enter to continue...")
-            os.system("clear")
-            game_board(dealer, player)
-            if player.value == 21:
-                print(f"Player has 21!")
-                player.playing = False
-                dealer.playing = False
-            elif player.value > 21:
-                if player.aces > 0:
-                    player.value -= 10
-                    player.aces -= 1
-                else:
-                    print(f"Bust! Player has {player.value}!")
-                    player.playing = False
-        else:
-            print(f"Player opts to stay with a value of {player.value}")
-            player.playing = False
-            input("Press enter to continue...")
-        dealer.cards[0].hidden = False
+    hit_or_stay(dealer, player)
     
     if player.value <= 21:
         while dealer.playing:
@@ -146,20 +181,39 @@ def blackjack(playing=True):
         game_board(dealer,player)
         if dealer.value < player.value or dealer.value > 21:
             winner = "Player wins!"
+            chips.win_bet()
         elif dealer.value > player.value:
             winner = "Dealer wins!"
+            chips.lose_bet()
         else:
             winner = "Push"
-    
+            chips.push_bet()
         print(f"\n\n{winner}")
+    else:
+        chips.lose_bet()
 
-
-        
-            
+    if chips.bank == 0:
+        print("Sorry, you are out of chips to bet!")
+        playing = False
+    else:
+        while True:
+            play_again = input("Would you like to play again? (y) or (n)")
+            if strcmp_nocase("n", play_again):
+                print(f"Thank you for playing. Please see the cashier to change out your {chips.bank} chips for cash. Please come again!")
+                playing = False
+                break
+            elif strcmp_nocase("y", play_again):
+                break
+            else:
+                print("Invalid response.")
+    return playing
+    
 
 if __name__ == "__main__":
-    # test_deck = Deck()
-    # test_deck.shuffle()
-    # my_hand = Hand(test_deck)
-
-    blackjack()
+    
+    chips = Chips()
+    while True:
+        os.system("clear")
+        take_bet(chips)
+        if blackjack() == False:
+            break
