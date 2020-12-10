@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36964080-8061-4e2f-abad-e580e9bede00" name="Default" comment="" />
+    <list default="true" id="57578be7-7685-413f-824e-c7bfc83fa286" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,14 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tic-tac-toe.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tic-tac-toe.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+      <file leaf-file-name="errors_and_exceptions.ipynb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/errors_and_exceptions.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="1" />
             </state>
           </provider>
         </entry>
@@ -28,21 +25,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tic-tac-toe.py" />
+        <option value="$PROJECT_DIR$/errors_and_exceptions.ipynb" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1282" />
-    <option name="width" value="1278" />
-    <option name="height" value="1440" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="984" />
+    <option name="y" value="291" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -53,8 +51,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="Milestone_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Milestone_1" type="462c0819:PsiDirectoryNode" />
+              <item name="Errors_and_Exception_Handling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Errors_and_Exception_Handling" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -64,7 +62,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="IpnbConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -78,52 +76,74 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Errors_and_Exception_Handling" type="JupiterNotebook" factoryName="Jupyter Notebook">
+      <module name="Errors_and_Exception_Handling" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="additionalOptions" value="" />
+      <option name="ipnbHost" value="127.0.0.1" />
+      <option name="ipnbPort" value="8888" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="36964080-8061-4e2f-abad-e580e9bede00" name="Default" comment="" />
-      <created>1530589972469</created>
+      <changelist id="57578be7-7685-413f-824e-c7bfc83fa286" name="Default" comment="" />
+      <created>1532560802429</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1530589972469</updated>
+      <updated>1532560802429</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1282" y="0" width="1278" height="1440" extended-state="0" />
+    <frame x="984" y="291" width="1400" height="1000" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960877" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22770123" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.49833888" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3299712" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32967034" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tic-tac-toe.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/pycharm_load_entry_point.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/errors_and_exceptions.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
         </state>
       </provider>
     </entry>
